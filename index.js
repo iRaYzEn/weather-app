@@ -28,7 +28,7 @@ async function weatherData(country) {
     wind.textContent = data.wind.speed + " km/h"
 
     // changeing the weather icon based on the the main value
-    let weatherCondition = data.weather[0].main;
+    let weatherCondition = data.weather[0].main.toLowerCase();
     weatherIcon.src = `./images/${weatherCondition}.png`
 
     // making the error message goes away and display the weather inforamtions
